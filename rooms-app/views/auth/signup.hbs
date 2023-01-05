@@ -1,0 +1,26 @@
+<h1>Signup Page</h1>
+
+<form action="/auth/signup" method="post">
+     <label> Fullname
+      <input type="text" name="fullname" placeholder="Enter your Fullname" />
+    </label>
+    <label> Username
+      <input type="text" name="username" placeholder="Enter your username" />
+    </label>
+    <label> Email
+      <input type="text" name="email" placeholder="Enter your emailId" />
+    </label>
+    <label>Password
+      <input type="password" name="password" placeholder="********" />
+    </label>
+ 
+    <button type="submit">Sigup</button>
+ 
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+</form>
+
+{{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
