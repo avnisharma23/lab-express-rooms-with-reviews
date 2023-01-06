@@ -1,1 +1,26 @@
-<h2>Create new Room</h2>
+<h1>Create New Room</h1>
+
+<form action="/rooms/room" method="post">
+     <label> Name
+      <input type="text" name="name" placeholder="Enter Room Name" />
+    </label>
+    <label> Description
+      <input type="text" name="description" placeholder="Enter room description" />
+    </label>
+    <label> ImageUrl
+      <input type="text" name="imageUrl" placeholder="Enter imageUrl" />
+    </label>
+     <label> Reviews
+      <input type="text" name="reviews" placeholder="Enter Reviews" />
+    </label>
+ 
+    <button type="submit">Create New Room</button>
+ 
+    {{#if errorMessage}}
+      <p class="error">{{errorMessage}}</p>
+    {{/if}}
+</form>
+
+{{#if errorMessage}}
+    <p class="error">{{errorMessage}}</p>
+  {{/if}}
